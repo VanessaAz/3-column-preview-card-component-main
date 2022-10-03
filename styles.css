@@ -1,0 +1,136 @@
+*, 
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --green: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+}
+
+p {
+    color: var(--white);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1 {
+    color: var(--gray);
+    font-family: 'Big Shoulders Display', cursive;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9375rem;
+}
+
+main {
+    display: grid;
+    max-width: 350px;
+}
+
+img {
+    margin-top: 1em;
+}
+
+.card{
+    padding: 2em;
+}
+
+.orange {
+    background-color: var(--orange);
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.blue {
+    background-color: var(--cyan);
+}
+
+.green{
+    background-color: var(--green);
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+.btn{
+    border: none;
+    border-radius: 1em;
+    padding: .5em 1.5em;
+    background-color: var(--gray);
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+}
+
+.orange-btn{
+    color: var(--orange);
+}
+
+.orange-btn:hover{
+    color: var(--gray);
+    background-color: var(--orange);
+    border: 1px solid var(--gray);
+}
+
+.blue-btn {
+    color: var(--cyan);
+}
+
+.blue-btn:hover{
+    color: var(--gray);
+    background-color: var(--cyan);
+    border: 1px solid var(--gray);
+}
+
+.green-btn {
+    color: var(--green);
+}
+
+.green-btn:hover{
+    color: var(--gray);
+    background-color: var(--green);
+    border: 1px solid var(--gray);
+}
+
+@media (min-width:600px) {
+
+    body{
+        height: 100vh;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1000px;
+    }
+
+    .card {
+        height: 70vh;
+        position: relative;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .orange {
+        border-bottom-left-radius: .5em;
+        border-top-left-radius: .5em;
+        border-top-right-radius: 0;
+    }
+
+    .green {
+        border-bottom-right-radius: .5em;
+        border-top-right-radius: .5em;
+        border-bottom-left-radius: 0;
+    }
+}
